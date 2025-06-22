@@ -1,0 +1,127 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #d4fc79, #96e6a1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 15px;
+  color: #333;
+}
+
+/* Main Container */
+.container {
+  background: #ffffff;
+  padding: 30px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+/* Form Inputs & Button */
+form input,
+form button {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+
+form input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+  outline: none;
+}
+
+form button {
+  background-color: #2e7d32;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1b5e20;
+}
+
+/* Expense List */
+#expenseList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#expenseList li {
+  background: #f9f9f9;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-left: 5px solid #2e7d32;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14.5px;
+}
+
+/* Delete Button */
+#expenseList button {
+  background-color: #e53935;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+#expenseList button:hover {
+  background-color: #c62828;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  form input,
+  form button {
+    font-size: 14px;
+  }
+
+  #expenseList li {
+    font-size: 13.5px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #expenseList button {
+    margin-top: 8px;
+  }
+}
